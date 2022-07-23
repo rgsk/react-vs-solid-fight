@@ -3,7 +3,10 @@ import { Component, For } from 'solid-js';
 
 import { cart, onSetSearch, search } from '../store';
 
+let index = 0;
 export const Header: Component<{}> = ({}) => {
+  console.log(`Header:${index++}`);
+
   return (
     <div class="bg-blue-900 text-white flex flex-row w-full py-4">
       <div class="text-2xl px-10 py-2">

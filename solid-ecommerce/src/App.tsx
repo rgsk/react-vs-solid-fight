@@ -5,7 +5,9 @@ import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
 import { ProductDetail } from './components/ProductDetail';
 
+let index = 0;
 const App: Component = () => {
+  console.log(`App:${index++}`);
   return (
     <div>
       <Header />

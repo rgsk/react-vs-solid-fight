@@ -3,7 +3,11 @@ import { Component, createMemo, For } from 'solid-js';
 
 import { cart, products, search } from '../store';
 
+let index = 0;
+
 export const HomePage: Component<{}> = ({}) => {
+  console.log(`HomePage:${index++}`);
+
   const filteredProducts = createMemo(() =>
     (products() ?? []).filter(
       (product) =>

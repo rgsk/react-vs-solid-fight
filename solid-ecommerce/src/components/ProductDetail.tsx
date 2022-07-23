@@ -3,7 +3,11 @@ import { Component, createMemo } from 'solid-js';
 
 import { cart, products } from '../store';
 
+let index = 0;
+
 export const ProductDetail: Component = () => {
+  console.log(`ProductDetail:${index++}`);
+
   const { id } = useParams<{
     id: string;
   }>();
