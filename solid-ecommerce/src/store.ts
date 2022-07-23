@@ -3,17 +3,28 @@ import { createMutable } from 'solid-js/store';
 
 import { Product } from './product';
 
+const CART_PRODUCTS_ITEM_KEY = "cartProducts";
 export const [search, setSearch] = createSignal("");
 export const cart = createMutable({
-  products: [] as Product[],
+  products: JSON.parse(
+    window.localStorage.getItem(CART_PRODUCTS_ITEM_KEY) || "[]"
+  ) as Product[],
   get total() {
     return this.products.reduce((total, product) => total + product.price, 0);
   },
   addToCart(product: Product) {
     this.products.push(product);
+    window.localStorage.setItem(
+      CART_PRODUCTS_ITEM_KEY,
+      JSON.stringify(this.products)
+    );
   },
   clearCart() {
     this.products = [];
+    window.localStorage.setItem(
+      CART_PRODUCTS_ITEM_KEY,
+      JSON.stringify(this.products)
+    );
   },
 });
 export const [products] = createResource<Product[]>(
