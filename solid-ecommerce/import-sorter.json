@@ -1,6 +1,6 @@
 {
   "generalConfiguration.sortOnBeforeSave": true,
-  "generalConfiguration.sortImportsInDirectory": false,
+  "generalConfiguration.sortImportsInDirectory": true,
   "importStringConfiguration.tabSize": 2,
   "importStringConfiguration.hasSemicolon": true,
   "importStringConfiguration.quoteMark": "single",
