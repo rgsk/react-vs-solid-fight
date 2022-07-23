@@ -1,12 +1,13 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import type { Product } from "../product";
-
+let index = 0;
 export const HomePage: React.FunctionComponent<{
   products: Product[];
   onAddToCart: (product: Product) => void;
   search: string;
 }> = ({ products, onAddToCart, search }) => {
+  console.log(`HomePage: ${index++}`);
   const filteredProducts = useMemo(
     () =>
       (products ?? []).filter(
@@ -50,7 +51,7 @@ export const HomePage: React.FunctionComponent<{
                 </div>
                 <button
                   onClick={(evt) => {
-                    evt.stopPropagation();
+                    evt.preventDefault();
                     onAddToCart(product);
                   }}
                   className="text-lg px-8 py-1 font-bold bg-blue-800 text-white rounded-full"

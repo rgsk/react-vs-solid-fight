@@ -8,8 +8,9 @@ import type { Product } from "./product";
 import { HomePage } from "./components/HomePage";
 import { ProductDetail } from "./components/ProductDetail";
 import { Header } from "./components/Header";
-
+let index = 0;
 function App() {
+  console.log(`App: ${index++}`);
   const [cart, setCart] = useLocalStorage<Product[]>("cart", []);
   const [products, setProducts] = useState<Product[]>([]);
 

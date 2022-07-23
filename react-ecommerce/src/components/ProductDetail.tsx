@@ -1,11 +1,12 @@
 import React, { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import type { Product } from "../product";
-
+let index = 0;
 export const ProductDetail: React.FunctionComponent<{
   products: Product[];
   onAddToCart: (product: Product) => void;
 }> = ({ products, onAddToCart }) => {
+  console.log(`ProductDetail: ${index++}`);
   const { id } = useParams<{
     id: string;
   }>();
@@ -45,7 +46,7 @@ export const ProductDetail: React.FunctionComponent<{
                   </div>
                   <button
                     onClick={(evt) => {
-                      evt.stopPropagation();
+                      evt.preventDefault();
                       onAddToCart(product);
                     }}
                     className="text-2xl px-8 py-1 font-bold bg-blue-800 text-white rounded-full"

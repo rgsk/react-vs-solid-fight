@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import type { Product } from "../product";
+let index = 0;
 
 export const Header: React.FunctionComponent<{
   cart: Product[];
@@ -8,6 +9,8 @@ export const Header: React.FunctionComponent<{
   search: string;
   onSetSearch: (search: string) => void;
 }> = ({ cart, onClearCart, search, onSetSearch }) => {
+  console.log(`Header: ${index++}`);
+
   const total = useMemo(
     () => (cart ? cart.reduce((total, p) => total + p.price, 0) : 0),
     [cart]

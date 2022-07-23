@@ -1313,12 +1313,12 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-solid-app-router@^0.1.3:
-  version "0.1.14"
-  resolved "https://growthschool-314254797702.d.codeartifact.ap-south-1.amazonaws.com:443/npm/gw/solid-app-router/-/solid-app-router-0.1.14.tgz#2ffb1bfbb7db7d9d1cd81be5aec1eb786b961573"
-  integrity sha512-fnX+jCB5sDMbjq3od9qGtQNdlvHP2c6DG5STvMHVXyNuSEN+MdO7WJtZ58OpVpq6zWS4FYeYAh7NMEa7C2CcOA==
+solid-app-router@^0.4.1:
+  version "0.4.1"
+  resolved "https://growthschool-314254797702.d.codeartifact.ap-south-1.amazonaws.com:443/npm/gw/solid-app-router/-/solid-app-router-0.4.1.tgz#cee8da5167fb1e7ce740528324118d76a3d197ba"
+  integrity sha512-RKHyFQ+J5lXyE/SoyJVHgTBeBck2etYVJn1/9F7ehlzyD2pIOMqLpNXD1GfWQljHqNdXZBSyE+xB/Cck5l9Q/g==
 
-solid-js@^1.0.7:
+solid-js@^1.4.7:
   version "1.4.7"
   resolved "https://growthschool-314254797702.d.codeartifact.ap-south-1.amazonaws.com:443/npm/gw/solid-js/-/solid-js-1.4.7.tgz#c174199c9248bcdceb66fa1b216348eef4541dfe"
   integrity sha512-u3hoe5w3xseAc/8zLwYaQVGanWXknMMQkzryNz7lOPy2ygW6DhCtfMseun4kLflRNRzrUUpTV3W5p7j2SGcHCQ==
